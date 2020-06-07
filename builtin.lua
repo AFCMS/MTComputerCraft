@@ -1,7 +1,7 @@
 -- digicompute/builtin.lua
 
-digicompute.builtin = {}
-local builtin = digicompute.builtin
+computercraft.builtin = {}
+local builtin = computercraft.builtin
 
 -- [function] check if file exists
 function builtin.exists(path)

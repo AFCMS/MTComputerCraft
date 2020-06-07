@@ -1,7 +1,5 @@
--- digicompute/env.lua --
-
 -- [function] create environment
-function digicompute.env()
+function computercraft.env()
 	local function safe_date()
 		return(os.date("*t",os.time()))
 	end
@@ -95,7 +93,7 @@ function digicompute.env()
 end
 
 -- [function] run code
-function digicompute.run_code(code, env, ...)
+function computercraft.run_code(code, env, ...)
 	if code:byte(1) == 27 then
 		return nil, "Binary code prohibited."
 	end
@@ -121,7 +119,7 @@ function digicompute.run_code(code, env, ...)
 end
 
 -- [function] run file
-function digicompute.run_file(path, env, ...)
+function computercraft.run_file(path, env, ...)
 	local code = digicompute.builtin.read(path)
 	local ok, res = digicompute.run_code(code, env, ...)
 	return ok, res
